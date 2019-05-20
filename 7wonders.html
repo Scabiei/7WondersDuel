@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+	<header>
+		<meta charset="UTF-8">
+		<title>7 Wonders Duel</title>
+		<link rel="stylesheet" href="7wonders.css">
+	</header>
+	
+	<body>
+		<main>
+			<h1>7 Wonders Duel</h1>
+			
+			<section id="playerStats">				
+				<div class="playerName" id="humanName"></div>
+				<div class="resources"></div>
+				<div class="resources" style="background-color:darkred"></div>
+				<div class="resources" style="background-color:brown"></div>
+				<div class="resources" style="background-color:grey"></div>
+				<div class="resources" style="background-color:blue"></div>
+				<div class="resources" style="background-color:yellow"></div>				
+			</section>
+
+			<section id="cardBoard">
+
+				<div class="ageCard">
+					<div class="cardHeading"></div> <!-- ce que rapporte la carte, avec éventuel symbole d'effet (certainement à isoler) -->
+					<div class="cardCost"></div> <!-- les ressources que coûtent la carte à l'achat -->
+					<div class="cardFree"></div> <!-- symbole d'éventuel gratuité -->
+					<div class="cardBody"></div> <!-- là ou il y avait le dessin (sera vide ici) -->
+					<div class="cardName"></div> <!-- le nom de la carte dans le bas -->
+				</div>
+
+			</section>
+			
+			<section id="AIStats">				
+				<div class="playerName" id="AIName"></div>
+				<div class="resources"></div>
+				<div class="resources" style="background-color:darkred"></div>
+				<div class="resources" style="background-color:brown"></div>
+				<div class="resources" style="background-color:grey"></div>
+				<div class="resources" style="background-color:blue"></div>
+				<div class="resources" style="background-color:yellow"></div>				
+			</section>
+					
+		</main>
+		
+		<footer>
+		</footer>
+	</body>	
+		
+		<!-- SCRIPTS -->
+		<script src="js/vars.js"></script>
+		<script src="js/ageCards.js"></script>	
+		<script src="js/main.js"></script>	
+	
+</html>
