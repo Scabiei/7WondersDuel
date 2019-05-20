@@ -52,32 +52,78 @@ function pick(sourceArray, number, boxReturning) {
 pick(wonders,4,2);
 
 Game.init = Game.init || {};
-Game.init.installAgeCards =
-    function(age) {
-        if (age === 3) console.warn("Inclure les guildes !");
+Game.html = Game.html || {};
+
+Game.makeCardboardLines = // verif nom "cardBoard"
+    function(age, o_lines) {
+        let ageProperties = 
+            { 
+            age1 :
+                    {
+                    lines: 4, line1Cards : 6,
+                    },
+            age2 :
+                    {
+                    lines: 4, line1Cards : 6,
+                    },
+            age3 :
+                    {
+                    lines: 4, line1Cards : 6,
+                    }
+            };
+                
+    // code de la fonction
+};
     
-        // Former le deck age I
-        // Mettre à jour le plateau html/css
     
+    
+    
+Game.installAgeCards = // sortir de init pour l'environnement gobal Game ?
+    function(age) {    
+        // On réinitialise le plateau afin d'éviter tout soucis.
+        Game.html.cardBoard.innerHTML = "";
+    
+        // Selon l'âge, mettre à jour en conséquence le plateau html/css.    
         // La disposition des cartes sur le plateau dépend de l'age en cours.
         switch (age) {
             case 1:
                 // A l'âge I, il y a 4 lignes de cartes.
-                // La 1e ligne contient 5 cartes visibles.
-                let line1 = carBoard.appendChild(document.createElement("div"));
+                // La 1e ligne (la plus haute) contient 6 cartes visibles.
+                let line1 = Game.html.cardBoard.appendChild(document.createElement("div"));
                 let i = 0;
-                while (i < 5) {
+                while (i < 6) {
                     let newCard = line1.appendChild(document.createElement("div"));
                     newCard.classList.add("buildingCard");
+                    // créer une fonction qui fait remplir la "div.buildingCard" selon les propriétés de l'objet "Card" concerné ?
                     i++;
                 }
+                
+                // La 2e ligne (sous la plus haute) contient 5 cartes cachées.
+                let line2 = Game.html.cardBoard.appendChild(document.createElement("div"));
+                let j = 0;
+                while (j < 5) {
+                    let newCard = line2.appendChild(document.createElement("div"));
+                    newCard.classList.add("hidden");
+                    // créer une fonction qui fait remplir la "div.buildingCard" selon les propriétés de l'objet "Card" concerné ?
+                    j++;
+                }
+                
+                // La 3e ligne contient 4 cartes visibles. Il faut identifier :
+                
+                // * l'élément HTML parent auquel ajouter des lignes
+                // * masquer les cartes 1 ligne sur 2
+                // * les remplir
+                
                 break;
+                
+                
                 
             case 2:
                 // A l'âge II, il y a x lignes de cartes.
                 break;
                 
             case 3:
+                console.warn("Inclure les guildes !");
                 // A l'âge III, il y a x lignes de cartes.
                 break;
                 
