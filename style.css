@@ -1,0 +1,43 @@
+.playerName {
+	width: 35%;
+	border: 2px dashed black;
+}
+
+.resources {
+	width: 5%;
+	border: 1px solid black;
+}
+
+#playerStats, #AIStats {
+	border: 5px solid black;
+}
+
+#cardBoard {
+
+}
+
+.ageCard {
+	width: 25px;
+}
+
+.cardHeading {
+
+}
+
+.cardCost {
+	width: 5px;
+}
+
+.cardFree {
+	width: 5px;
+}
+
+.cardBody {
+	
+}
+
+.cardName {
+	width: 90%;
+	border: 1px solid gray;
+	border-radius: 15px;
+}
